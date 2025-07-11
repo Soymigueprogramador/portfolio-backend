@@ -6,10 +6,10 @@ const router = express.Router();
 
 // Ruta POST para recibir mensajes del formulario
 router.post('/', async (req, res) => {
-    const { nombre, email, mensaje } = req.body;
+    const { nombre, email, asunto, mensaje } = req.body;
 
     // Validación de datos
-    if (!nombre || !email || !mensaje) {
+    if (!nombre || !email || !asunto || !mensaje) {
         return res.status(400).json({ mensaje: 'Faltan datos' });
     }
 
