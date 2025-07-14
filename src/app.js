@@ -20,6 +20,14 @@ app.use(express.json());
 // API del formulario de contacto. 
 app.use('/api/contacto', contactoRouter);
 
+app.get('/', ( req, res ) => {
+    res.send('Hola a todos desde la api. Estamos en el HOME!!')
+});
+
+app.get('/contactoRouter', ( req, res ) => {
+    res.send('Hola a todos desde la api. Si ves esto es porque la ruta funciona!!')
+});
+
 // Levantando el servidor.
 app.listen(PORT, ( req, res ) => {
     console.log(`Servidor corriendo en http://localhost:${PORT}`);

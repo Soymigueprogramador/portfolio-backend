@@ -14,7 +14,7 @@ const app = express();
 const PORT = process.env.PORT || 8080;
 
 app.use(cors({
-    origin: 'http://127.0.0.1:5500'  // o 'http://localhost:5500' si lo usás así
+    //origin: 'http://127.0.0.1:5500'  // o 'http://localhost:5500' si lo usás así
 }));
 app.use(express.json());
 
@@ -27,7 +27,7 @@ app.get('/', (req, res) => {
     console.log('Hola a todos!!');
 });
 
-// Levantando el servidor
+// Levantando el servidorÑ
 app.listen(PORT, () => {
-    console.log(`Servidor corriendo en http://localhost:${PORT}`);
+  console.log(`Servidor escuchando en el puerto ${PORT}`);
 });

@@ -1,5 +1,5 @@
 // Importación de dependencias necesarias
-import express from 'express';
+import express, { application } from 'express';
 import nodemailer from 'nodemailer';
 
 const router = express.Router();
